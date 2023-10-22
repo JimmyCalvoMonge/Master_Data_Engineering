@@ -17,3 +17,9 @@ This repository contains all homeworks and projects that I have completed during
 
 Modules:
 1. Python for developers.
+
+------------------------
+
+[![Linkedin](https://i.stack.imgur.com/gVE0j.png) LinkedIn](https://www.linkedin.com/in/jimmy-calvo-monge-367636208/)
+&nbsp;
+[![GitHub](https://i.stack.imgur.com/tskMh.png) GitHub](https://github.com/JimmyCalvoMonge)
