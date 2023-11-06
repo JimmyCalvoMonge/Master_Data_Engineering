@@ -1,2 +1,2 @@
-from .bidicmad import BiciMad
+from .bicimad import BiciMad
 from .urlemt import UrlEMT
