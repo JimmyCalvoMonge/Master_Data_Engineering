@@ -1,0 +1,4 @@
+### Programación en Scala
+
+El lenguaje Scala se ha impuesto como uno de los estándares para la creación de flujos de datos, motores de ingesta y
+preparación del dato. Se trata de un lenguaje con características avanzadas que combina el paradigma orientado a objetos, habitual en la industria del desarrollo de software desde hace años, con el paradigma funcional, algo novedoso y que da lugar a códigos elegantes, concisos y muy expresivos. Se introducirá al alumno en los conceptos tradicionales de la programación orientada a objetos y funcional en el lenguaje Scala, así como a las construcciones habituales de este lenguaje y sus características funcionales fundamentales, apoyándonos en el IDE más popular entre los ingenieros de datos.
