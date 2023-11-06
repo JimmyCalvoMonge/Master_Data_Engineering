@@ -10,6 +10,7 @@ Este repositorio contiene todas las tareas y proyectos que he realizado durante 
 
 Módulos:
 1. Python para desarrolladores.
+2. Programación en Scala.
 
 ------------------------
 
@@ -17,3 +18,4 @@ This repository contains all homeworks and projects that I have completed during
 
 Modules:
 1. Python for developers.
+2. Scala programming.
