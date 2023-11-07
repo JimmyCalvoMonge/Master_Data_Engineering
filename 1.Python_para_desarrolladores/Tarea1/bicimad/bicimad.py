@@ -11,7 +11,12 @@ class BiciMad():
 
     @staticmethod
     def get_data(month: int, year: int) -> pd.DataFrame:
-
+        """
+        this function gives us the dataframe from the csv file object returned
+        by the get_csv function of the urlemt class.
+        :month: int
+        :year: int
+        """
         # Llamamos a UrlEMT para obtener el fichero csv
         urlemt_ = UrlEMT()
         csvfile = urlemt_.get_csv(month, year)
@@ -83,6 +88,15 @@ class BiciMad():
 
 
     def resume(self) -> pd.Series:
+        """
+        : método de instancia que devuelve un objeto de tipo Series con las 
+        siguientes restricciones:
+        el índice está formado con las etiquetas: 'year', 'month', 'total_uses',
+        'total_time', 'most_popular_station', 'uses_from_most_popular'
+        los valores son: el año, el mes, el total de usos en dicho mes, el 
+        total de horas en dicho mes, el conjunto de estaciones de bloqueo 
+        con mayor número de usos y el número de usos de dichas estaciones.
+        """
 
         resumedata_ = [self.year, self.month,
                        self.data_.shape[0],

@@ -15,6 +15,10 @@ class UrlEMT():
 
     @staticmethod
     def select_valid_urls() -> list[str]:
+        """
+        this method returns valid links from the EMT//GENERAL url
+        performing a get request and parsing the links with the get_links function.
+        """
         try:
             r = requests.get(f'{UrlEMT.EMT}{UrlEMT.GENERAL}')
             html_text = r.text
@@ -26,12 +30,24 @@ class UrlEMT():
 
     @staticmethod
     def get_links(htmlText: str) -> list[str]:
+        """
+        this function finds all the valid links in the html contents of the url.
+        The links should be of the form trips_(year)_(month)_(fullmonth).aspx
+        :htmlText: string
+        """
         valid_links = re.findall('href="(.*?)trips_(.*?).aspx"', htmlText)
         valid_links = [
             f'{link[0]}trips_{link[1]}.aspx' for link in valid_links]
         return valid_links
 
     def get_url(self, month: int, year: int) -> str:
+        """
+        this function returns the url associated with a month and year.
+        Month should be between 1 and 12 and year between 21 and 23.
+        If the url cannot be found in the valid_url's of the class then we raise an exception.
+        :month: int
+        :year: int
+        """
 
         if (month >= 1) and (month <= 12) and (year >= 21) and (year <= 23):
 
@@ -53,6 +69,12 @@ class UrlEMT():
                 between 1 and 12 and 21 and 23 respectively""")
 
     def get_csv(self, month: int, year: int) -> io.StringIO:
+        """
+        This function returns the StringIO object that holds the csv
+        obtained from the corresponding url associated for month and year.
+        :month: int
+        :year: int
+        """
 
         url = self.get_url(month, year)
         # Ahora usamos el mismo código que aplicamos en el notebook.
