@@ -73,11 +73,11 @@ class UrlEMT():
             print("Error Connecting:", errc)
 
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    urlemt = UrlEMT()
-    for vu in urlemt.valid_urls:
-        print(vu)
+#     urlemt = UrlEMT()
+#     for vu in urlemt.valid_urls:
+#         print(vu)
 
-    print('---')
-    print(urlemt.get_url(2, 23))
+#     print('---')
+#     print(urlemt.get_url(2, 23))

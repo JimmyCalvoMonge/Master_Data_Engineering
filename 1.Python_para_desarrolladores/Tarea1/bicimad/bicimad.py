@@ -1,4 +1,4 @@
-from urlemt import UrlEMT
+from .urlemt import UrlEMT
 import pandas as pd
 
 class BiciMad():
@@ -99,10 +99,10 @@ class BiciMad():
         return resume_
     
 
-if __name__ == '__main__':
+# if __name__ == '__main__':
 
-    # Ejemplo del notebook de etapa 1:
-    bicimad = BiciMad(2, 23)
-    bicimad.clean()
-    print(bicimad.data.info())
-    print(bicimad.resume())
+#     # Ejemplo del notebook de etapa 1:
+#     bicimad = BiciMad(2, 23)
+#     bicimad.clean()
+#     print(bicimad.data.info())
+#     print(bicimad.resume())
