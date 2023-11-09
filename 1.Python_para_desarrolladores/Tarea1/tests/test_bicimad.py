@@ -50,8 +50,8 @@ Testing most_popular_station from BiciMad
 
 @pytest.mark.parametrize(
       "month, year, expected_station", [
-          (2, 23, {'43'}),
-          (12, 22, {'57'})
+          (2, 23, {"'Plaza de la Cebada nº 16 '"}),
+          (12, 22, {"'Calle Valencia nº 1'"})
       ]
 )
 

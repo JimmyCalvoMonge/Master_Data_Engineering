@@ -12,7 +12,7 @@ authors = [
 	{name = 'Jimmy Calvo', email = 'jimmyca@ucm.es'},
 ]
 
-dependencies = [ "requests ~= 2.1"]
+dependencies = [ "requests >= 2.1.0", "pandas >= 2.1.0"]
 
 [tool.setuptools.packages.find]
 exclude = ["tests*"]

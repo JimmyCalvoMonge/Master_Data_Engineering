@@ -2,6 +2,19 @@ from .urlemt import UrlEMT
 import pandas as pd
 
 class BiciMad():
+    """
+
+    >>> bicimad = BiciMad(2, 23)
+    >>> bicimad.clean()
+    >>> bicimad.resume()
+    year                                                 23
+    month                                                 2
+    total_uses                                       168491
+    total_time                                   53892.0675
+    most_popular_station      {'Plaza de la Cebada nº 16 '}
+    uses_from_most_popular                             2189
+    dtype: object
+    """
 
     def __init__(self, month: int, year: int):
         self.month = month
@@ -75,7 +88,7 @@ class BiciMad():
 
     @staticmethod
     def most_popular_stations(data: pd.DataFrame) -> set:
-        station_uses = data.groupby("station_unlock").size().sort_values(ascending=False)
+        station_uses = data.groupby("address_unlock").size().sort_values(ascending=False)
         station_uses = station_uses[station_uses == station_uses.max()]
         # Esto nos da el conjunto de indices en donde se alcanza el máximo
         return set(station_uses.index)
@@ -83,7 +96,7 @@ class BiciMad():
 
     @staticmethod
     def usage_from_most_popular_station(data: pd.DataFrame) -> int:
-        station_uses = data.groupby("station_unlock").size().sort_values(ascending=False)
+        station_uses = data.groupby("address_unlock").size().sort_values(ascending=False)
         return station_uses.max()
 
 
@@ -118,5 +131,4 @@ class BiciMad():
 #     # Ejemplo del notebook de etapa 1:
 #     bicimad = BiciMad(2, 23)
 #     bicimad.clean()
-#     print(bicimad.data.info())
 #     print(bicimad.resume())

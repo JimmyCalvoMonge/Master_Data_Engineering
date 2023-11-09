@@ -679,7 +679,8 @@ License:                     GNU GENERAL PUBLIC LICENSE
         
 Requires-Python: >=3.8
 Description-Content-Type: text/markdown
-Requires-Dist: requests~=2.1
+Requires-Dist: requests>=2.1.0
+Requires-Dist: pandas>=2.1.0
 
 # Paquete bicimad
 

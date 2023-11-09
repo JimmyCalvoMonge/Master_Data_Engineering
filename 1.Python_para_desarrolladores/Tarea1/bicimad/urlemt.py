@@ -6,6 +6,15 @@ import io
 
 
 class UrlEMT():
+    """
+    This class performs requests to the opendata url for EMT Madrid
+    and returns a csv file for bycicle uses for a specific month and year.
+
+    >>> urlemt = UrlEMT()
+    >>> urlemt.get_url(2, 23)
+    'https://opendata.emtmadrid.es//getattachment/7a88cb04-9007-4520-88c5-a94c71a0b925/trips_23_02_February-csv.aspx'
+
+    """
 
     EMT = 'https://opendata.emtmadrid.es/'
     GENERAL = "/Datos-estaticos/Datos-generales-(1)"
@@ -61,6 +70,7 @@ class UrlEMT():
                     "No link available for this month-year combination")
 
             else:
+                # We return the first url found for this month and year.
                 return f'{UrlEMT.EMT}{urlsReturn[0]}'
 
         else:
@@ -96,10 +106,9 @@ class UrlEMT():
 
 
 # if __name__ == '__main__':
-
 #     urlemt = UrlEMT()
-#     for vu in urlemt.valid_urls:
-#         print(vu)
-
-#     print('---')
 #     print(urlemt.get_url(2, 23))
+
+if __name__ == "__main__":
+    import doctest
+    doctest.testmod()
